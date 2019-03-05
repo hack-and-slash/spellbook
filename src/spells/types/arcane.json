@@ -1,0 +1,27 @@
+[
+  [
+    { "name": "Abrir/Trancar" },
+    { "name": "Animar corda" },
+    { "name": "Apagar" },
+    { "name": "Detectar magia" },
+    { "name": "Detectar mortos-vivos" },
+    { "name": "Disco flutuante" },
+    { "name": "Enfeitiçar pessoas" },
+    { "name": "Escudo arcano" },
+    { "name": "Expandir/Encolher" },
+    { "name": "Ilusão" },
+    { "name": "Ler idiomas" },
+    { "name": "Ler magias" },
+    { "name": "Luz" },
+    { "name": "Mãos flamejantes" },
+    { "name": "Mensagem" },
+    { "name": "Mísseis mágicos" },
+    { "name": "Patas de aranha" },
+    { "name": "Proteção contra alinhamento" },
+    { "name": "Salto" },
+    { "name": "Servo invisível" },
+    { "name": "Sono" },
+    { "name": "Toque chocante" },
+    { "name": "Ventriloquismo" }
+  ]
+]
