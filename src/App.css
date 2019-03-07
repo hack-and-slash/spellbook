@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  padding: 16px;
+}
+
 .field {
   width: 100%;
   border: 1px solid #000;
@@ -11,6 +15,7 @@
   padding: 10px;
   font-size: 16px;
   margin-bottom: 16px;
+  height: 40px;
 }
 
 button {

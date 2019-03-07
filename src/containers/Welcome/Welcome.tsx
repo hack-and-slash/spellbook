@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Formik } from 'formik';
 
-import './Welcome.css';
-
 class Welcome extends Component {
   render() {
     return (

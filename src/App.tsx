@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import Welcome from './containers/Welcome/Welcome';
+import Spells from './containers/Spells/Spells';
+
+import './App.css';
 
 class App extends Component {
   render() {
     return (
       <section>
         <h1>Spellbook</h1>
-        <Welcome />
+        <Spells />
       </section>
     );
   }
