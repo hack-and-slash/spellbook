@@ -1,13 +1,13 @@
 {
-  "main.css": "/spellbook/static/css/main.7e90eefa.chunk.css",
-  "main.js": "/spellbook/static/js/main.f9163842.chunk.js",
-  "main.js.map": "/spellbook/static/js/main.f9163842.chunk.js.map",
-  "runtime~main.js": "/spellbook/static/js/runtime~main.7ad20060.js",
-  "runtime~main.js.map": "/spellbook/static/js/runtime~main.7ad20060.js.map",
-  "static/js/2.ea3bdd8c.chunk.js": "/spellbook/static/js/2.ea3bdd8c.chunk.js",
-  "static/js/2.ea3bdd8c.chunk.js.map": "/spellbook/static/js/2.ea3bdd8c.chunk.js.map",
-  "index.html": "/spellbook/index.html",
-  "precache-manifest.d15f39eae5373367c0df81439263ee6b.js": "/spellbook/precache-manifest.d15f39eae5373367c0df81439263ee6b.js",
-  "service-worker.js": "/spellbook/service-worker.js",
-  "static/css/main.7e90eefa.chunk.css.map": "/spellbook/static/css/main.7e90eefa.chunk.css.map"
+  "main.css": "/static/css/main.7e90eefa.chunk.css",
+  "main.js": "/static/js/main.7e66aaa4.chunk.js",
+  "main.js.map": "/static/js/main.7e66aaa4.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
+  "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
+  "static/js/2.ea3bdd8c.chunk.js": "/static/js/2.ea3bdd8c.chunk.js",
+  "static/js/2.ea3bdd8c.chunk.js.map": "/static/js/2.ea3bdd8c.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.6f0ef6e9835152f551ff029ee4d9ebae.js": "/precache-manifest.6f0ef6e9835152f551ff029ee4d9ebae.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.7e90eefa.chunk.css.map": "/static/css/main.7e90eefa.chunk.css.map"
 }
