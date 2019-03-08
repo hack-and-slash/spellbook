@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { holy } from '../../spells/types';
 import SpellsSearchForm from './SpellsSearchForm';
 
-const Spells = (props: any) => {
+const Spells = () => {
   const [searchFilter, setSearchFilter] = React.useState({
     name: '',
     type: '',
@@ -20,12 +20,12 @@ const Spells = (props: any) => {
   return (
     <section>
       <SpellsSearchForm updateSearchFilter={updateSearchFilter} />
-      {holy.map((spellLevel: any) =>
+      {holy.map(spellLevel =>
         spellLevel
-          .filter((spell: any) =>
+          .filter(spell =>
             spell.name.toLowerCase().includes(searchFilter.name.toLowerCase()),
           )
-          .map((spell: any) => <div key={spell.id}>{spell.name}</div>),
+          .map(spell => <div key={spell.id}>{spell.name}</div>),
       )}
     </section>
   );
