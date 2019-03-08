@@ -1,11 +1,9 @@
 import nanoid from 'nanoid';
 
 import Spell from './Spell';
-import holySpellBook from './holy';
+import holySpells from './holy';
 
 const addIdToSpell = (spellBook: Spell[][]) =>
-  spellBook.map((level: Spell[]) =>
-    level.map((spell: Spell) => ({ ...spell, id: nanoid() })),
-  );
+  spellBook.map(level => level.map(spell => ({ ...spell, id: nanoid() })));
 
-export const holy = addIdToSpell(holySpellBook);
+export const holySpellBook = addIdToSpell(holySpells);

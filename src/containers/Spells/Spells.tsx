@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 
-import { holy } from '../../spells/types';
+import { holySpellBook } from '../../spells/types';
 import SpellsSearchForm from './SpellsSearchForm';
 import SpellCard from './SpellCard';
 
 const getFilteredSpells = (name: string) =>
-  holy.map(spellLevel =>
+  holySpellBook.map(spellLevel =>
     spellLevel.filter(spell =>
       spell.name.toLowerCase().includes(name.toLowerCase()),
     ),
@@ -28,14 +28,16 @@ const Spells = () => {
   return (
     <section>
       <SpellsSearchForm updateSearchFilter={updateSearchFilter} />
-      {getFilteredSpells(searchFilter.name).map((spellLevel, index) => (
-        <Fragment>
-          <h2>{index + 1}º círculo</h2>
-          {spellLevel.map(spell => (
-            <SpellCard key={spell.id} spell={spell} />
-          ))}
-        </Fragment>
-      ))}
+
+      {(searchFilter.type === 'holy' || searchFilter.type === '') &&
+        getFilteredSpells(searchFilter.name).map((spellLevel, index) => (
+          <Fragment>
+            <h2>{index + 1}º círculo</h2>
+            {spellLevel.map(spell => (
+              <SpellCard key={spell.id} spell={spell} />
+            ))}
+          </Fragment>
+        ))}
     </section>
   );
 };
