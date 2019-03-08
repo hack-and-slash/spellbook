@@ -17,6 +17,14 @@ const SpellCard = (props: SpellCardProps) => {
         `}
       >
         <h3>{props.spell.name}</h3>
+        <p
+          className={css`
+            font-style: italic;
+            margin: 8px 0;
+          `}
+        >
+          {props.spell.stats.join(' | ')}
+        </p>
         <p>{props.spell.description}</p>
       </div>
     </Fragment>
