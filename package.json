@@ -8,6 +8,7 @@
     "@types/node": "11.10.4",
     "@types/react": "16.8.6",
     "@types/react-dom": "16.8.2",
+    "emotion": "^10.0.7",
     "formik": "^1.5.1",
     "nanoid": "^2.0.1",
     "react": "^16.8.3",
