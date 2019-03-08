@@ -1,6 +1,6 @@
 import nanoid from 'nanoid';
 
-import { Spell } from 'src/models/Spell';
+import { Spell } from 'src/models/spell';
 import holySpells from './holy';
 
 const addIdToSpell = (spellBook: Spell[][]) =>

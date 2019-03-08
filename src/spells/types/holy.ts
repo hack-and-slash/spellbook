@@ -1,4 +1,4 @@
-import Spell from './Spell';
+import { Spell } from 'src/models/spell';
 
 const holySpellBook: Spell[][] = [
   [
