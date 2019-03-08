@@ -31,7 +31,7 @@ const Spells = () => {
 
       {(searchFilter.type === 'holy' || searchFilter.type === '') &&
         getFilteredSpells(searchFilter.name).map((spellLevel, index) => (
-          <Fragment>
+          <Fragment key={`holy-${index}`}>
             <h2>{index + 1}º círculo</h2>
             {spellLevel.map(spell => (
               <SpellCard key={spell.id} spell={spell} />
