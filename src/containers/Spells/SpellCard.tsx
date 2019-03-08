@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { css } from 'emotion';
 
-import Spell from '../../spells/types/Spell';
+import { Spell } from 'src/models/spell';
 
 interface SpellCardProps {
   spell: Spell;

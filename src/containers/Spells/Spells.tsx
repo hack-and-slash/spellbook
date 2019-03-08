@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { holySpellBook } from '../../spells/types';
+import { holySpellBook } from 'src/spells/types';
 import SpellsSearchForm from './SpellsSearchForm';
 import SpellCard from './SpellCard';
 
