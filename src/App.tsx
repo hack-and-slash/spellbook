@@ -8,7 +8,7 @@ const App = () => (
     className={css`
       background-color: #f4f6f8;
       padding: 20px;
-      height: 100vh;
+      min-height: 100vh;
     `}
   >
     <Spells />
