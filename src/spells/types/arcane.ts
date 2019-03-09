@@ -240,3 +240,5 @@ const arcaneSpellBook: Spell[][] = [
     },
   ]
 ]
+
+export default arcaneSpellBook;
