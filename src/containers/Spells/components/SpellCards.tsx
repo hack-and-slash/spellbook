@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { css } from 'emotion';
 
 import SpellSearchFilter from '../models/SpellSearchFilter';
 import SpellCard from './SpellCard';
@@ -15,9 +16,19 @@ const SpellCards = (props: SpellCardsProps) => (
     {filterSpellBook(props.searchFilter.name).map((spellLevel, index) => (
       <Fragment key={`holy-${index}`}>
         <h3>{index + 1}º círculo</h3>
-        {spellLevel.map(spell => (
-          <SpellCard key={spell.id} spell={spell} />
-        ))}
+
+        <div
+          className={css`
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 16px;
+          `}
+        >
+          {spellLevel.map(spell => (
+            <SpellCard key={spell.id} spell={spell} />
+          ))}
+        </div>
       </Fragment>
     ))}
   </Fragment>

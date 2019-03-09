@@ -1,11 +1,11 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  padding: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .field {
@@ -16,10 +16,4 @@ body {
   font-size: 16px;
   margin-bottom: 16px;
   height: 40px;
-}
-
-button {
-  border: 1px solid #000;
-  background-color: #fff;
-  padding: 12px;
 }

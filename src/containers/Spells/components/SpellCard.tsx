@@ -12,20 +12,21 @@ const SpellCard = (props: SpellCardProps) => {
     <Fragment>
       <div
         className={css`
+          background-color: #fff;
           padding: 16px;
-          border-bottom: 1px solid #ccc;
+          margin-bottom: 8px;
+          box-shadow: 0 1px 2px 0 rgba(63, 63, 68, 0.15);
+          border-radius: 3px;
+          width: 100%;
+          text-align: center;
+
+          @media (min-width: 768px) {
+            width: 30%;
+          }
         `}
       >
         <h3>{props.spell.name}</h3>
-        <p
-          className={css`
-            font-style: italic;
-            margin: 8px 0;
-          `}
-        >
-          {props.spell.stats.join(' | ')}
-        </p>
-        <p>{props.spell.description}</p>
+        <small>{props.spell.stats[0]}</small>
       </div>
     </Fragment>
   );

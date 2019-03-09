@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import Spells from './containers/Spells/Spells';
+import { css } from 'emotion';
 
-import './App.css';
+import Spells from 'src/containers/Spells/Spells';
 
-class App extends Component {
-  render() {
-    return (
-      <section>
-        <h1>Spellbook</h1>
-        <Spells />
-      </section>
-    );
-  }
-}
+const App = () => (
+  <section
+    className={css`
+      background-color: #f4f6f8;
+      padding: 20px;
+      height: 100vh;
+    `}
+  >
+    <Spells />
+  </section>
+);
 
 export default App;
