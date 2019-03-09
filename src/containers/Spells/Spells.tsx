@@ -1,18 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 
-import { holySpellBook } from 'src/spells/types';
-import SpellsSearchForm from './SpellsSearchForm';
-import SpellCard from './SpellCard';
-
-const getFilteredSpells = (name: string) =>
-  holySpellBook.map(spellLevel =>
-    spellLevel.filter(spell =>
-      spell.name.toLowerCase().includes(name.toLowerCase()),
-    ),
-  );
+import SpellSearchFilter from './models/SpellSearchFilter';
+import SpellsSearchForm from './components/SpellsSearchForm';
+import SpellCards from './components/SpellCards';
 
 const Spells = () => {
-  const [searchFilter, setSearchFilter] = React.useState({
+  const [searchFilter, setSearchFilter] = useState<SpellSearchFilter>({
     name: '',
     type: '',
   });
@@ -29,15 +22,9 @@ const Spells = () => {
     <section>
       <SpellsSearchForm updateSearchFilter={updateSearchFilter} />
 
-      {(searchFilter.type === 'holy' || searchFilter.type === '') &&
-        getFilteredSpells(searchFilter.name).map((spellLevel, index) => (
-          <Fragment key={`holy-${index}`}>
-            <h2>{index + 1}º círculo</h2>
-            {spellLevel.map(spell => (
-              <SpellCard key={spell.id} spell={spell} />
-            ))}
-          </Fragment>
-        ))}
+      {(searchFilter.type === 'holy' || searchFilter.type === '') && (
+        <SpellCards searchFilter={searchFilter} />
+      )}
     </section>
   );
 };
