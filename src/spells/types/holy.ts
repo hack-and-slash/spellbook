@@ -98,7 +98,7 @@ const holySpellBook: Spell[][] = [
       description:
         'O personagem pode perceber em lugares, pessoas ou coisas, a presença de uma magia. Os alvos detectados emitem um leve brilho azulado, que não é perceptível aos olhos das outras pessoas. Caso o alvo seja caótico, a aura emitirá um brilho errático. Por exemplo: itens mágicos podem ser descobertos desta forma, assim como a presença de um feitiço secretamente colocado em uma pessoa.',
       stats: [
-        'Arcana 1, Divina 1',
+        'Divina 1, Arcana 1',
         'Alcance: raio de 10 metros + 3 metros/nível',
         'Duração: 1d6 turnos +1 turno/nível',
       ],
@@ -128,7 +128,7 @@ const holySpellBook: Spell[][] = [
       description:
         'O objeto alvo produz luz tão brilhante quanto uma tocha, que ilumina uma área com raio de 6 metros por 1 hora+10 minutos/nível. Se memorizada como uma magia de 2º círculo, a luz emite o brilho enquanto o personagem desejar.',
       stats: [
-        'Arcana 1, 2, Divina 1, 2',
+        'Divina 1, 2, Arcana 1, 2',
         'Alcance: toque',
         'Duração: especial (ver texto)',
       ],
@@ -148,7 +148,7 @@ const holySpellBook: Spell[][] = [
       description:
         'Esta magia cria uma barreira mágica invisível ao redor do personagem, o protegendo de qualquer ataque realizado por uma criatura/fonte caótica ou ordeira. Os ataques físicos recebem uma penalidade de -2. A proteção confere 25% de resistência à magia ao personagem. Se preparada como uma magia de terceiro círculo, ao invés de proteger apenas o personagem que lançou a magia, protege todos os aliados em uma área de 9 metros de raio ao seu redor. Neste caso, ela pode ser utilizada não só como uma forma de proteção, mas também para prender em seu interior uma criatura de determinado alinhamento por 24 horas por nível. Uma criatura aprisionada que tenha resistência à magia pode testar a sua resistência uma vez ao dia. Em caso de sucesso, consegue transpassar a barreira mágica.',
       stats: [
-        'Arcana 1, 3, Divina 1, 3',
+        'Divina 1, 3, Arcana 1, 3',
         'Alcance: pessoal',
         'Duração: 1d6 turnos + 1 turno/nível',
         'RM: Sim',
