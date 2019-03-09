@@ -5,12 +5,14 @@ import { Spell } from 'src/models/spell';
 
 interface SpellCardProps {
   spell: Spell;
+  onClick(event: any): void;
 }
 
 const SpellCard = (props: SpellCardProps) => {
   return (
     <Fragment>
       <div
+        onClick={props.onClick}
         className={css`
           background-color: #fff;
           padding: 16px;

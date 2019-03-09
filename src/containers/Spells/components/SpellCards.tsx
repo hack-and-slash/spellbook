@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
 import { css } from 'emotion';
 
+import { Spell } from 'src/models/spell';
 import SpellSearchFilter from '../models/SpellSearchFilter';
 import SpellCard from './SpellCard';
 import filterSpellBook from '../filterSpellBook';
 
 interface SpellCardsProps {
   searchFilter: SpellSearchFilter;
+  handleCurrentSpellChange: (spell: Spell) => any;
 }
 
 const SpellCards = (props: SpellCardsProps) => (
@@ -26,7 +28,11 @@ const SpellCards = (props: SpellCardsProps) => (
           `}
         >
           {spellLevel.map(spell => (
-            <SpellCard key={spell.id} spell={spell} />
+            <SpellCard
+              key={spell.id}
+              spell={spell}
+              onClick={() => props.handleCurrentSpellChange(spell)}
+            />
           ))}
         </div>
       </Fragment>
