@@ -6,11 +6,7 @@ const arcaneSpellBook: Spell[][] = [
       name: 'Abrir/Trancar',
       description:
         'Esta magia pode ser utilizada para dois efeitos distintos: abrir o acesso a qual-quer instrumento ou objeto que esteja fechado, trancado ou emperrado; e fe-char um acesso pela duração da magia (ou até ser dissipada).Criaturas com resistência a magia po-dem destrancar um objeto fechado por esta magia.',
-      stats: [
-        'Arcana 1',
-        'Alcance: toque',
-        'Duração: permanente',
-      ],
+      stats: ['Arcana 1', 'Alcance: toque', 'Duração: permanente'],
     },
     {
       name: 'Animar corda',
@@ -27,11 +23,7 @@ const arcaneSpellBook: Spell[][] = [
       name: 'Apagar',
       description:
         'Esta magia remove qualquer conteúdo escrito  de  qualquer  superfície.  O  que estava escrito em cartas, documentos, pergaminhos, mapas e etc. é totalmen-te apagado.Caso a escrita seja parte de uma magia, use as mesmas regras de dissipar magias para determinar as chances de sucesso.',
-      stats: [
-        'Arcana 1',
-        'Alcance: toque',
-        'Duração: permanente',
-      ],
+      stats: ['Arcana 1', 'Alcance: toque', 'Duração: permanente'],
     },
     {
       name: 'Detectar magia',
@@ -238,7 +230,278 @@ const arcaneSpellBook: Spell[][] = [
         'Duração: 1d6 turnos + 1 turno/nível',
       ],
     },
-  ]
-]
+  ],
+  [
+    {
+      name: 'Aterrorizar',
+      description:
+        'Todas as criaturas com menos de 5 dados de vida e que estejam no raio de B alcance da magia ficarão automaticamente aterrorizadas caso falhem em uma jogada de proteção modificada pela Sabedoria. Criaturas aterrorizadas sofrem com o medo, tremendo descontroladamente e recebendo uma penalidade de -2 em todas as suas jogadas, sofrendo ainda com uma chance de 5% por nível do mago de soltar quaisquer objetos que estejam segurando.',
+      stats: [
+        'Arcana 2',
+        'Alcance: raio de 10 metros + 3 metros/nível',
+        'Duração: 1d6 turnos + 1 turno/nível',
+        'Jogada de proteção: JP+SAB nega',
+      ],
+    },
+    {
+      name: 'Despedaçar',
+      description:
+        'Esta magia cria um ruído extremamente agudo, que quebra materiais a até 1,5 m de distância do ponto em que a magia foi lançada. Vidros, cristais, porcelanas, cerâmicas e materiais semelhantes podem ser quebrados com esta magia. ',
+      stats: [
+        'Arcana 2',
+        'Alcance: especial (ver texto)',
+        'Duração: instantânea',
+      ],
+    },
+    {
+      name: 'Detectar alinhamento',
+      description:
+        'Esta magia possibilita ao personagem que se concentrar por um turno inteiro detectar a aura de uma pessoa ou objeto, determinando assim o seu alinhamento. Alinhamentos magicamente ocultos se revelarão sempre como neutros.',
+      stats: [
+        'Divina 1, Arcana 2',
+        'Alcance: raio de 10 metros + 3 metros/nível',
+        'Duração: 1d6 turnos + 1 turno/nível',
+      ],
+    },
+    {
+      name: 'Detectar invisibilidade',
+      description:
+        'O mago consegue detectar objetos e criaturas invisíveis, como se fossem normalmente visíveis.',
+      stats: [
+        'Arcana 2',
+        'Alcance: raio de 10 metros + 3 metros/nível',
+        'Duração: 1d6 turnos + 1 turno/nível',
+      ],
+    },
+    {
+      name: 'Escuridão',
+      description:
+        'Esta magia cria uma área de escuridão que é impenetrável até mesmo para a visão no escuro. As magias Luz ou Dissipar magia podem ser utilizadas para cancelar a Escuridão.',
+      stats: [
+        'Arcana 2',
+        'Alcance: raio de 10 metros + 3 metros/nível',
+        'Duração: 1d6 turnos + 1 turno/nível',
+      ],
+    },
+    {
+      name: 'Esfera flamejante',
+      description:
+        'O mago cria uma esfera de chamas rastejante que se move até 10 metros por turno, de acordo com o seu comando. A esfera causa 2d6 pontos de dano em qualquer alvo que estiver dentro dela e 1d6 pontos de dano em qualquer alvo que fique a até 1,5 metros da esfera. Cabe ao mago direcionar a esfera, do contrário ela ficará paralisada até o término da duração da magia.',
+      stats: [
+        'Arcana 2',
+        'Alcance: raio de 3 metros + 1 metro/nível',
+        'Duração: 1d4 turnos + 1 turno/nível',
+      ],
+    },
+    {
+      name: 'Força arcana',
+      description:
+        'Esta magia pode ser conjurada em qualquer alvo vivo com Força maior ou igual a 1. Pela duração da magia, o alvo recebe 1 ponto extra para cada 5 pontos de Força que já possua. Assim, um homem de armas com Força 16 teria seu atributo aumentado para 19, enquanto um mago com Força 9 teria seu atributo aumentado para 10. O cálculo deve ser sempre realizado com o valor original da Força do personagem, sem levar em conta outras magias, itens mágicos ou demais efeitos que ampliem o valor do atributo original.',
+      stats: [
+        'Arcana 2',
+        'Alcance: toque',
+        'Duração: 1d6 turnos + 1 turno/nível',
+      ],
+    },
+    {
+      name: 'Invisibilidade',
+      description:
+        'O alvo desta magia, seja este uma pessoa ou objeto, se torna totalmente invisível. Uma criatura invisível não pode ser atacada, a menos que sua localização aproximada seja conhecida, e esses ataques recebem ainda uma penalidade de -10. A magia é dissipada se o alvo invisível realizar qualquer tipo de ataque ou lançar uma magia. Se preparada como uma magia de 3o círculo, a magia torna invisível todas as criaturas e objetos em uma área de 3 metros de diâmetro.',
+      stats: [
+        'Arcana 2, 3',
+        'Alcance: toque',
+        'Duração: 1d6 turnos + 1 turno/nível',
+      ],
+    },
+    {
+      name: 'Levitação',
+      description:
+        'Com esta magia, o mago é capaz de se mover em uma linha reta vertical. Esta magia necessita apenas de uma palavra para ser ativada, podendo ser evocada em qualquer situação, até mesmo durante uma queda.',
+      stats: [
+        'Arcana 2',
+        'Alcance: pessoal',
+        'Duração: 1d6',
+        'turnos + 1 turno/nível',
+      ],
+    },
+    {
+      name: 'Localizar objetos',
+      description:
+        'Esta magia dá ao mago a direção correta (como o voo de um corvo) até um objeto do tipo que especificar na descrição. O objeto não pode ser algo que o mago nunca viu, apesar de que a magia pode detectar um objeto em uma classe geral de itens conhecidos do mago: cadeiras, ouro, etc., mas com uma precisão ainda menor.',
+      stats: [
+        'Arcana 2',
+        'Alcance: raio de 10 metros + 3 metros/nível',
+        'Duração: instantânea',
+      ],
+    },
+    {
+      name: 'Névoa fétida',
+      description:
+        'O mago cria uma densa nuvem esverdeada de odor repulsivo e repugnante. Todos dentro da área de efeito de 3 m3 devem fazer uma jogada de proteção modificada pela Constituição ou cairão nauseados por 1d4 turnos. Um alvo nauseado perde toda a sua Destreza na CA e recebe uma penalidade de -2 nos ataques.',
+      stats: [
+        'Arcana 2',
+        'Alcance: raio de 10 metros + 3 metros/nível',
+        'Duração: 1d6 turnos + 1 turno/nível',
+        'Jogada de proteção: JP+CON nega',
+      ],
+    },
+    {
+      name: 'Raio de enfraquecimento',
+      description:
+        'Esta magia reduz magicamente a Força de um alvo em 10 pontos até o limite de 3. Todas as habilidades que fazem uso de Força, como carga, ataques e danos são prejudicadas até que o efeito da magia acabe.',
+      stats: [
+        'Arcana 2,',
+        'Alcance: toque,',
+        'Duração: 1d4 turnos + 1 turno/nível',
+      ],
+    },
+    {
+      name: 'P.E.S. (Percepção Extra Sensorial)',
+      description:
+        'O mago pode detectar os pensamentos de outros seres a uma distância máxima de 18 metros. A magia não pode penetrar mais de 60 centímetros de pedra e é bloqueada até mesmo pela mais fina folha de chumbo. Esta percepção faz com que o mago compreenda qualquer pensamento como se lhe fosse dito em voz alta, desde que o mago compartilhe o mesmo idioma que o alvo da magia. ',
+      stats: [
+        'Arcana 2',
+        'Alcance: raio de 10 metros + 3 metros/nível',
+        'Duração: 1 hora + 10 minutos/nível',
+      ],
+    },
+    {
+      name: 'Reflexos',
+      description:
+        'A magia cria 1d4+1 reflexos do mago, que, como espelhos, agem em perfeita sincronia com ele. Os atacantes não podem distinguir os reflexos do original e podem atacar uma das imagens ao invés do mago verdadeiro. Em caso de sucesso no ataque, haverá 50% de chance do alvo atingido ser o reflexo. Caso o ataque seja direcionado a uma área em que estejam tanto o mago quanto o seu reflexo, essa jogada é dispensada. Um reflexo atingido é imediatamente dissipado.',
+      stats: [
+        'Arcana 2',
+        'Alcance: pessoal',
+        'Duração: 1d6 turnos + 1 turno/nível',
+      ],
+    },
+    {
+      name: 'Resistir energia',
+      description:
+        'Esta magia confere ao alvo proteção limitada contra um tipo específico de energia (ácido, frio, eletricidade, fogo ou sônico). O alvo recebe resistência 10 contra o tipo de energia selecionada, significando que, ao sofrer dano daquela energia, sofrerá o dano -10. O valor da resistência passa para 20 no 7o nível e para 30 no 11o. A magia também protege o equipamento do alvo. A resistência absorve apenas o dano. Outras penalidades oriundas da energia se aplicam normalmente.',
+      stats: [
+        'Arcana 2, Divina 2',
+        'Alcance: toque',
+        'Duração: 10 minutos/nível',
+      ],
+    },
+    {
+      name: 'Teia',
+      description:
+        'Teias fibrosas e grudentas preenchem umaáreadeaté3x3x6metros,tornando essa área extremamente difícil de ser atravessada. A movimentação na área afetada é reduzida a 1/3, ocasionando uma penalidade de -2 na CA e nas jogadas de proteção modificadas pela Destreza.',
+      stats: [
+        'Arcana 2',
+        'Alcance: raio de 3 metros + 1 metro/nível',
+        'Duração: 1 hora + 10 minutos/nível',
+      ],
+    },
+    {
+      name: 'Ver invisibilidade',
+      description:
+        'Com esta magia o mago consegue enxergar normalmente objetos e criaturas que estão invisíveis, desde que estejam em sua linha de visão. Essas criaturas aparecem de forma translúcida, possibilitando ao mago discernir quais são visíveis, quais estão invisíveis e quais são etéreas. A magia não revela como a criatura se tornou invisível, nem revela ilusões.',
+      stats: ['Arcana 2 e 3', 'Alcance: pessoal', 'Duração: 10 minutos/nível'],
+    },
+  ],
+  [
+    { name: 'Bola de fogo', description: '', stats: [] },
+    { name: 'Deslocamento', description: '', stats: [] },
+    { name: 'Dissipar magia', description: '', stats: [] },
+    { name: 'Flecha de chamas ', description: '', stats: [] },
+    { name: 'Forma espectral ', description: '', stats: [] },
+    { name: 'Imobilizar pessoas', description: '', stats: [] },
+    { name: 'Invisibilidade ', description: '', stats: [] },
+    { name: 'Invocar criaturas ', description: '', stats: [] },
+    { name: 'Lentidão', description: '', stats: [] },
+    { name: 'Morte aparente ', description: '', stats: [] },
+    { name: 'Piscar', description: '', stats: [] },
+    { name: 'Proteção contra projéteis', description: '', stats: [] },
+    { name: 'Relâmpago', description: '', stats: [] },
+    { name: 'Runas explosivas ', description: '', stats: [] },
+    { name: 'Sugestão', description: '', stats: [] },
+    { name: 'Toque vampírico ', description: '', stats: [] },
+    { name: 'Velocidade', description: '', stats: [] },
+    { name: 'Voo', description: '', stats: [] },
+  ],
+  [
+    { name: 'Arma encantada', description: '', stats: [] },
+    { name: 'Armadilha de fogo ', description: '', stats: [] },
+    { name: 'Círculo tentacular ', description: '', stats: [] },
+    { name: 'Confusão', description: '', stats: [] },
+    { name: 'Drenar vida', description: '', stats: [] },
+    { name: 'Escudo de fogo', description: '', stats: [] },
+    { name: 'Extensão', description: '', stats: [] },
+    { name: 'Liberdade de movimento ', description: '', stats: [] },
+    { name: 'Medo', description: '', stats: [] },
+    { name: 'Metamorfose', description: '', stats: [] },
+    { name: 'Muralha de fogo', description: '', stats: [] },
+    { name: 'Muralha de gelo', description: '', stats: [] },
+    { name: 'Muralha de pedra ', description: '', stats: [] },
+    { name: 'Olho arcano', description: '', stats: [] },
+    { name: 'Porta dimensional ', description: '', stats: [] },
+    { name: 'Tempestade glacial ', description: '', stats: [] },
+    { name: 'Veneno', description: '', stats: [] },
+  ],
+  [
+    { name: 'Baú secreto', description: '', stats: [] },
+    { name: 'Cone de gelo', description: '', stats: [] },
+    { name: 'Criar passagens', description: '', stats: [] },
+    { name: 'Enfraquecer o intelecto ', description: '', stats: [] },
+    { name: 'Imobilizar monstros', description: '', stats: [] },
+    { name: 'Mão interveniente', description: '', stats: [] },
+    { name: 'Moldar rochas', description: '', stats: [] },
+    { name: 'Muralha de energia', description: '', stats: [] },
+    { name: 'Muralha de ferro', description: '', stats: [] },
+    { name: 'Quebrar encantamento', description: '', stats: [] },
+    { name: 'Reanimar mortos ', description: '', stats: [] },
+    { name: 'Névoa mortal', description: '', stats: [] },
+    { name: 'Telecinésia', description: '', stats: [] },
+    { name: 'Teleporte', description: '', stats: [] },
+    { name: 'Transformação maldita', description: '', stats: [] },
+  ],
+  [
+    { name: 'Concha antimagia ', description: '', stats: [] },
+    { name: 'Controlar o clima ', description: '', stats: [] },
+    { name: 'Desintegrar', description: '', stats: [] },
+    { name: 'Encantar item', description: '', stats: [] },
+    { name: 'Esfera gélida', description: '', stats: [] },
+    { name: 'Globo de invulnerabilidade ', description: '', stats: [] },
+    { name: 'Magia da morte', description: '', stats: [] },
+    { name: 'Mover a terra', description: '', stats: [] },
+    { name: 'Proteção', description: '', stats: [] },
+    { name: 'Reencarnação ', description: '', stats: [] },
+    { name: 'Visão da verdade', description: '', stats: [] },
+  ],
+  [
+    { name: 'Palavra de poder: atordoar ', description: '', stats: [] },
+    { name: 'Passagem invisível', description: '', stats: [] },
+    { name: 'Rebater magia', description: '', stats: [] },
+    { name: 'Reverter gravidade', description: '', stats: [] },
+    { name: 'Simulacro ', description: '', stats: [] },
+    { name: 'Visão', description: '', stats: [] },
+  ],
+  [
+    { name: 'Aprisionar alma', description: '', stats: [] },
+    { name: 'Clone', description: '', stats: [] },
+    { name: 'Imunidade à magia ', description: '', stats: [] },
+    { name: 'Labirinto', description: '', stats: [] },
+    { name: 'Limpar a mente', description: '', stats: [] },
+    { name: 'Metamorfosear objetos ', description: '', stats: [] },
+    { name: 'Nuvem incendiária', description: '', stats: [] },
+    { name: 'Palavra de poder: cegar', description: '', stats: [] },
+    { name: 'Permanência ', description: '', stats: [] },
+    { name: 'Símbolo', description: '', stats: [] },
+  ],
+  [
+    { name: 'Aprisionamento', description: '', stats: [] },
+    { name: 'Chuva de meteoros ', description: '', stats: [] },
+    { name: 'Desejo', description: '', stats: [] },
+    { name: 'Esfera prismática ', description: '', stats: [] },
+    { name: 'Êxtase temporal ', description: '', stats: [] },
+    { name: 'Magia astral', description: '', stats: [] },
+    { name: 'Palavra de poder: matar ', description: '', stats: [] },
+    { name: 'Parar o tempo', description: '', stats: [] },
+    { name: 'Portal', description: '', stats: [] },
+  ],
+];
 
 export default arcaneSpellBook;

@@ -1,7 +1,7 @@
-import { holySpellBook } from 'src/spells/types';
+import { Spell } from 'src/models/spell';
 
-const filterSpellBook = (name: string) =>
-  holySpellBook.map(spellLevel =>
+const filterSpellBook = (name: string, list: Spell[][]) =>
+  list.map(spellLevel =>
     spellLevel.filter(spell =>
       spell.name.toLowerCase().includes(name.toLowerCase()),
     ),
