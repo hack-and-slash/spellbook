@@ -5,7 +5,7 @@ const arcaneSpellBook: Spell[][] = [
     {
       name: 'Abrir/Trancar',
       description:
-        'Esta magia pode ser utilizada para dois efeitos distintos: abrir o acesso a qual-quer instrumento ou objeto que esteja fechado, trancado ou emperrado; e fe-char um acesso pela duração da magia (ou até ser dissipada).Criaturas com resistência a magia po-dem destrancar um objeto fechado por esta magia.',
+        'Esta magia pode ser utilizada para dois efeitos distintos: abrir o acesso a qualquer instrumento ou objeto que esteja fechado, trancado ou emperrado; e fe-char um acesso pela duração da magia (ou até ser dissipada).Criaturas com resistência a magia po-dem destrancar um objeto fechado por esta magia.',
       stats: ['Arcana 1', 'Alcance: toque', 'Duração: permanente'],
     },
     {
@@ -403,24 +403,96 @@ const arcaneSpellBook: Spell[][] = [
     },
   ],
   [
-    { name: 'Bola de fogo', description: '', stats: [] },
-    { name: 'Deslocamento', description: '', stats: [] },
-    { name: 'Dissipar magia', description: '', stats: [] },
-    { name: 'Flecha de chamas ', description: '', stats: [] },
-    { name: 'Forma espectral ', description: '', stats: [] },
-    { name: 'Imobilizar pessoas', description: '', stats: [] },
-    { name: 'Invisibilidade ', description: '', stats: [] },
-    { name: 'Invocar criaturas ', description: '', stats: [] },
-    { name: 'Lentidão', description: '', stats: [] },
-    { name: 'Morte aparente ', description: '', stats: [] },
-    { name: 'Piscar', description: '', stats: [] },
-    { name: 'Proteção contra projéteis', description: '', stats: [] },
-    { name: 'Relâmpago', description: '', stats: [] },
-    { name: 'Runas explosivas ', description: '', stats: [] },
-    { name: 'Sugestão', description: '', stats: [] },
-    { name: 'Toque vampírico ', description: '', stats: [] },
-    { name: 'Velocidade', description: '', stats: [] },
-    { name: 'Voo', description: '', stats: [] },
+    {
+      name: 'Bola de fogo',
+      description: 'Um projétil semelhante a uma peque-na  pérola  de  chamas  é  disparado  do dedo do mago, para explodir em cha-mas no lugar alvo. O raio da explosão é de 6 metros e o dano é de 1d6 por ní-vel do mago (máximo 10d6). A explo-são se adapta ao volume disponível.Um sucesso em uma jogada de prote-ção modificada pela Destreza reduz o dano desta magia pela metade. Se me-morizada como uma magia de 7º cír-culo, a explosão da bola de fogo pode ser adiada por até 10 minutos.',
+      stats: ['Arcana 3, 7' , 'Alcance: raio de 10 metros + 3  metros/nível' ,  'Duração:  instantânea'  , 'Jogada de proteção: JP+DES reduz o dano pela metade']
+    },
+    {
+      name: 'Deslocamento',
+      description: 'Esta magia faz com que o alvo pareça estar a 50 centímetros de distância do local em que realmente está. Todos os ataques  bem-sucedidos  contra  o  alvo possuem  50%  de  chance  de  erro.  A magia  Visão  da  verdade  revela  a  real localização do alvo.',
+      stats: [ 'Arcana 3' , 'Alcance: criatura tocada' , 'Duração: 1 turno/nível' ]
+    },
+    {
+      name: 'Dissipar magia',
+      description: 'Esta magia pode ser usada para dissipar completamente os efeitos de outra magia,  lançada  sobre  um  objeto  ou área.  A  jogada  para  tentar  dissipar  a magia  é  de  1d20  +  nível  do  persona-gem  que  está  lançando  a  magia,  e  a dificuldade é de 5 + círculo da magia a ser dissipada + nível do personagem que  lançou  a  magia  a  ser  dissipada. Magos  só  podem  dissipar  magias  ar-canas e clérigos só podem dissipar ma-gias  divinas.  Esta  magia  não  é  capaz de  desencantar  permanentemente  um item mágico, mas suprime seus efeitos por 10 minutos.',
+      stats: [ 'Arcana 3, Divina 3' , 'Alcance: raio de 10 metros + 3 metros/nível' , 'Duração: permanente' ]
+    },
+    {
+      name: 'Flecha de chamas ',
+      description: 'Com  esta  magia,  o  mago  consegue criar flechas de fogo (1 para cada 5 níveis de mago) que causam 1d6 pontos de dano e outros 4d6 pontos de dano por fogo. Uma jogada de ataque de toque à distância é necessária para que os alvos sejam atingidos por essas flechas.',
+      stats: [ 'Arcana 3' , 'Alcance: raio de 10 metros + 3 metros/nível' , 'Duração: 1d4 turnos + 1 turno/nível' , 'Ataque: toque à distância' ]
+    },
+    {
+      name: 'Forma espectral ',
+      description: 'Com esta magia, o mago e seus pertences se transformam em matéria insubstancial, se tornando imune a ataques  normais,  sendo  afetado  apenas por magia ou armas mágicas.Nesta forma, o mago pode atravessar portas e paredes de até 5 centímetros de espessura, mas não consegue voar, ou interagir com objetos físicos, o que o  impede  inclusive  de  atacar.  Portas ou  paredes  reforçadas  por  chumbo impedem os efeitos desta magia.Enquanto estiver insubstancial, o mago será  ignorado  por  mortos-vivos  e  confundido com aparições e espectros.',
+      stats: [ 'Arcana 3' , 'Alcance: pessoal' , 'Duração: 1d6 turnos + 1 turno/nível' ]
+    },
+    {
+      name: 'Imobilizar pessoas',
+      description: 'O personagem escolhe 1d4 pessoas que ficam  completamente  imobilizadas, até  um  máximo  de  20  DV  de  pessoas para cada 5 níveis do personagem. Uma  jogada  de  proteção  modificada pela  Constituição  nega  este  efeito.  O personagem  também  pode  escolher uma  única  pessoa  para  imobilizar. Nesse caso, a jogada de proteção é feita com -2 de penalidade.',
+      stats: [ 'Arcana 3, Divina 2' , 'Alcance: especial (ver texto)' , 'Duração: 1 hora + 10 minutos/nível' , 'Jogada de proteção: JP+CON nega' ]
+    },
+    {
+      name: 'Invisibilidade ',
+      description: 'O  alvo  desta  magia,  seja  este  uma pessoa ou objeto, se torna totalmente invisível.  Uma  criatura  invisível  não pode ser atacada, a menos que sua localização aproximada seja conhecida, e  esses  ataques  recebem  ainda  uma penalidade de -10.A magia é dissipada se o alvo invisível realizar  qualquer  tipo  de  ataque  ou lançar uma magia. Se preparada como uma magia de 3º círculo, a magia torna invisível todas as criaturas e objetos em uma área de 3 metros de diâmetro.',
+      stats: [ 'Arcana  2,  3' , 'Alcance: toque' , 'Duração: 1d6 turnos + 1 turno/nível' ]
+    },
+    {
+      name: 'Invocar criaturas ',
+      description: 'Com  esta  magia  o  mago  é  capaz  de invocar 2d4 ajudantes que estejam nas redondezas para lhe prestar auxílio. Esses aliados o servirão até que a magia expire ou até que sejam mortos. As criaturas invocadas levam 1d4 turnos para aparecer e permanecerão por mais 1d6 turnos + 1 turno por nível ao lado do mago. A quantidade de DV das criaturas invocadas é equivalente ao círculo utilizado para preparar a magia:',
+      stats: [ 'Arcana 3, 4, 5, 6, 7, 8, 9' , 'Alcance: especial (ver texto)' , 'Duração: 1d6 turnos + 1 turno/nível' ]
+    },
+    {
+      name: 'Lentidão',
+      description: 'Todos dentro de uma área de 6 x 6 metros que não passarem em uma jogada de proteção modificada pela Constituição ficam lentos. Suas movimentações ficam  reduzidas  pela  metade,  e  recebem uma penalidade de -2 em todas as jogadas e na CA.',
+      stats: [ 'Arcana 3' , 'Alcance: raio de 3 metros + 1 me-tro/nível' , 'Duração: 1d6 turnos + 1 turnos/nível' , 'Jogada de proteção: JP+CON nega' ]
+    },
+    {
+      name: 'Morte aparente ',
+      description: 'Esta magia faz com que o mago ponha o alvo tocado em um estado semelhante  ao  coma.  O  alvo  conserva sua capacidade de audição e de olfato, muito embora não detenha a percepção visual ou táctil.Apenas  alvos  voluntários  podem  ser atingidos  por  esta  magia,  que  pode ser dissipada com um simples gesto do mago, muito embora as funções corporais ainda demorem 1 turno para voltarem ao normal.',
+      stats: [ 'Arcana 3' , 'Alcance: toque' , 'Duração: especial']
+    },
+    {
+      name: 'Piscar',
+      description: 'O  mago  “pisca”  entre  o  Plano  Mate-rial e o Plano Etéreo. A aparência fica como se a imagem do mago estivesse aparecendo  e  desaparecendo  em  alta velocidade e de forma aleatória.Piscar  possui  diversos  efeitos,  tais como:Ataques  físicos  contra  o  mago  possuem 50% de chance de erro. Caso o ataque desferido seja capaz de atingir criaturas  etéreas,  a  chance  é  de  20%. Caso a criatura que faz o ataque consiga  ver  criaturas  invisíveis,  a  chance também é de 20%. Caso as duas situações sejam aplicáveis, não existe percentual de erro.Da  mesma  forma,  os  ataques  desferidos pelo mago também têm 20% de chance  de  erro,  porém  o  mago  ataca como  se  estivesse  invisível  (bônus  de +2  nos  ataques),  e  o  alvo  não  pode considerar o bônus de DES na CA. O mago  sofre  apenas  50%  do  dano  em caso de queda, pois ele só cai quando está no Plano Material.Qualquer magia direcionada especificamente contra o mago também possui 50% de chance de falha, a não ser que o personagem conjurador consiga atingir  criaturas  etéreas  ou  invisíveis.  As magias  lançadas  pelo  mago  têm  20% de  chance  de  serem  ativadas  no  momento em que o mago se tornar etéreo. Neste caso, a magia não surte efeito algum no Plano Material.Enquanto está piscando, o mago sofre apenas  50%  do  dano  em  ataques  de área, a não ser que o ataque se estenda ao Plano Etéreo, situação que causa a totalidade  do  dano.  Enquanto  pisca, o mago pode atravessar (mas não ver através)  objetos  sólidos,  inclusive  seres vivos. Para cada 1,5m de material sólido que atravessa, o mago tem 50% de  chance  de  se  tornar  material  naquele exato momento. Se isso ocorrer, o mago é expelido para a área aberta mais próxima, sofrendo 1d6 pontos de dano para cada 1,5m atravessados desta forma. O mago se move a 3/4 da sua velocidade  normal  (a  movimentação no Plano Etéreo é 50% mais lenta).Por passar metade do tempo no Plano Etéreo, o mago consegue ver e atacar criaturas  etéreas.  Ele  interage  com criaturas etéreas da mesma forma que interage com criaturas materiais.Uma criatura etérea é incorpórea, invisível e capaz de se mover em qualquer direção. Uma criatura etérea consegue ver  e  ouvir  o  que  acontece  no  Plano Material,  mas  tudo  parece  acinzenta-do e insubstancial. A visão e a audição no Plano Material são limitadas a 100 metros. Uma criatura no Plano Etéreo não consegue atacar criaturas no Plano Material, e magias lançadas enquanto etéreo afetam apenas criaturas etéreas. Runas  e  abjurações  afetam  o  mago normalmente, tanto no Plano Material quanto no Plano Etéreo.',
+      stats: [ 'Arcana 3' , 'Alcance: pessoal' , 'Duração: 1 turno/nível']
+    },
+    {
+      name: 'Proteção contra projéteis',
+      description: 'O  mago  cria  um  campo  invisível  repelente a projéteis não mágicos como flechas, pedras de funda e quatrelos de bestas.',
+      stats: [ 'Arcana 3' , 'Alcance: pessoal' , 'Duração: 1d6 turnos + 1 turno/nível' ]
+    },
+    {
+      name: 'Relâmpago',
+      description: 'Apontando  o  dedo  para  um  alvo,  o mago emite um raio de sua mão que causa  1d8  pontos  de  dano  +1d8  de dano para cada 2 níveis de mago até um  máximo  de  10d8.  O  relâmpago ricocheteará no primeiro alvo e atingirá outra criatura à escolha do mago que esteja a até 6 metros de distância, recebendo  1d6  pontos  de  dano  +1d6 pontos  de  dano  a  cada  2  níveis  de mago até um máximo de 10d6.O relâmpago poderá ainda atingir uma terceira  criatura  à  escolha  do  mago, desde que esteja a até 6 metros de distância  da  segunda  criatura  atingida, e  receberá  1d4+1d4  pontos  de  dano  a cada 2 níveis de mago até um máximo de  10d4.  O  dano  pode  ser  reduzido pela metade com uma jogada de proteção modificada pela Destreza.',
+      stats: [ 'Arcana 3' , 'Alcance: raio de 10 metros + 3 me-tros/nível' , 'Duração: instantânea' , 'Jogada de proteção: JP+DES reduz o dano pela metade' ]
+    },
+    {
+      name: 'Runas explosivas ',
+      description: 'O  mago  escolhe  uma  runa  de  uma inscrição  qualquer  para  tornar  explosiva. Essa runa deve estar inscrita em uma  superfície  passível  de  ser  aberta, ou seja, em um baú, porta, portal, livro,  gaveta  e  etc.  Ao  ser  aberta  por uma  pessoa  diferente  do  mago  que  a conjurou,  a  runa  explodirá  causando 2d4+2 de dano a todos em uma área de 3 metros de raio da runa. O objeto com a runa inscrita e o mago que a encantou são  imunes  aos  efeitos  dessa  explosão. Uma  jogada  de  proteção  modificada pela Destreza reduz o dano pela metade.',
+      stats: [ 'Arcana 3' , 'Alcance: toque' , 'Duração: permanente' , 'Jogada de proteção: JP+DES reduz o dano pela metade' ]
+    },
+    {
+      name: 'Sugestão',
+      description: 'O mago faz em voz alta uma sugestão hipnótica para um alvo específico. Se o alvo for capaz de ouvi-la e falhar em uma  jogada  de  proteção  modificada pela  Sabedoria,  ele  vai  se  sentir  obrigado  a  cumprir  a  sugestão  por  uma semana.A sugestão pode conter ordens perigosas para o alvo, mas uma ordem suicida só fará efeito em 1% dos casos para cada 5 níveis do mago.',
+      stats: [ 'Arcana 3' , 'Alcance: especial (ver texto)' , 'Duração: especial (ver texto)' , 'Jogada de proteção: JP+SAB nega' ]
+    },
+    {
+      name: 'Toque vampírico ',
+      description: 'Para usar esta magia, o mago precisa fazer uma jogada de ataque de toque, que desconsidera o bônus proveniente da armadura (mas não de escudo) no cálculo da CA.O toque causa 1d6 pontos de dano para cada 2 níveis de mago (até o máximo de 10d6).Os pontos de vida subtraídos da vítima são transferidos para o mago, e desaparecem após 1 hora.',
+      stats: [ 'Arcana 3' , 'Alcance: toque' , 'Alvo: criatura tocada' , 'Duração: especial' , 'RM: sim']
+    },
+    {
+      name: 'Velocidade',
+      description: 'Até  1  criatura  tocada  para  cada  3  níveis  do  mago  tem  seu  metabolismo extremamente  acelerado,  concedendo uma movimentação acima do normal. A movimentação passa a ser dobrada, além de um bônus de +2 na classe de armadura e um ataque extra por turno usando o mesmo bônus do ataque principal. Essa aceleração é tão prejudicial ao organismo do alvo que ele envelhece 1 ano biologicamente.',
+      stats: [ 'Arcana 3' , 'Alcance: especial (ver texto)' , 'Duração: 1d4 turnos + 1 turno/nível' ]
+    },
+    {
+      name: 'Voo',
+      description: 'Esta magia dá ao mago o poder de voar, com  deslocamento  de  36m  por  turno, na direção ou orientação que desejar.',
+      stats: [ 'Arcana 3' , 'Alcance: pessoal' , 'Duração: 1d6 turnos + 1 turno/nível' ]
+    },
   ],
   [
     { name: 'Arma encantada', description: '', stats: [] },
